@@ -15,6 +15,26 @@
     <form action="/budget/new">
         <input type="submit" value="To new.ejs">
     </form>
+    
+    <% function addArrayNums(budget) { %>
+    <% let bankAccount = 0; %>
+    <% for (let i=0; i < allBudget.length; i++) { %>
+        <% bankAccount += allBudget[i].amount; %>
+        <% } %>
+       <% return bankAccount; %>
+       <% } %>
+
+
+
+    <!-- if(bankAccount < 0) { 
+         background-color="red"; 
+        }
+        else if(bankAccount > 1000)  { 
+            background-color="green"; 
+             }  -->
+
+       Bank Account: 
+
     <div class="container">
         <% for (let i=0; i < allBudget.length; i++) { %>
             <table>
