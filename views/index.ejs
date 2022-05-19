@@ -11,7 +11,25 @@
 </head>
 
 <body>
-
+    <h1>Budgtr All</h1>
+    <form action="/budget/new">
+        <input type="submit" value="To new.ejs">
+    </form>
+    <div class="container">
+        <% for (let i=0; i < allBudget.length; i++) { %>
+            <table>
+                <tr>
+                    <td>
+                        <%= allBudget[i].date %>
+                        <a href="/budget/<%= i %>">
+                            <%= allBudget[i].name %>
+                        </a>
+                        <%= allBudget[i].amount %>
+                    </td>
+                </tr>
+            </table>
+            <% } %>
+    </div>
 </body>
 
 </html>

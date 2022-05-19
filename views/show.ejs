@@ -11,6 +11,17 @@
 </head>
 
 <body>
+    <div class="container">
+        <h1><%= budgets.name %></h1>
+        <form action="/budget">
+            <input type="submit" value="Back to Budget Index">
+        </form>
+        <p>date <%= budgets.date %></p>
+        <p>name <%= budgets.name %></p>
+        <p>from <%= budgets.from %></p>
+        <p>amount <%= budgets.amount %></p>
+        <p>tags <%= budgets.tags %></p>
+    </div>
 
 </body>
 
